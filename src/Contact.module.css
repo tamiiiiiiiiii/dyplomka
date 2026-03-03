@@ -1,0 +1,164 @@
+﻿.contactSection {
+    width: 100%;
+    min-height: 100vh;
+    padding: 90px 20px 40px;
+    box-sizing: border-box;
+    background-image: linear-gradient(#0000008a), url(https://www.phsg.org/_site/data/images/news/214/main-MHAW%20STAFF%20FEMALE.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContainer {
+    width: min(1100px, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.infoCard,
+.formCard {
+    border-radius: 18px;
+    background: linear-gradient(160deg, rgba(0, 0, 0, 0.72), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(4, 8, 24, 0.35);
+    padding: 28px;
+}
+
+.infoCard h1 {
+    margin: 0 0 14px;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.05;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.infoCard > p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+.infoList {
+    margin-top: 24px;
+    display: grid;
+    gap: 12px;
+}
+
+.infoItem {
+    padding: 14px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.infoItem span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 6px;
+}
+
+.infoItem a,
+.infoItem p {
+    margin: 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.formCard h2 {
+    margin: 0 0 18px;
+    font-size: 30px;
+    color: #24b5be;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    padding: 12px 14px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 200ms ease, background-color 200ms ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #24b5be;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form button {
+    margin-top: 6px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #0b8188;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.form button:hover {
+    background-color: #0a6f74;
+}
+
+.successText {
+    margin: 14px 0 0;
+    color: #9df2d7;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .contactContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .infoCard,
+    .formCard {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactSection {
+        padding: 76px 14px 26px;
+    }
+
+    .infoCard,
+    .formCard {
+        padding: 18px;
+    }
+
+    .form button {
+        width: 100%;
+    }
+}

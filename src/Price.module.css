@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+.Prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(#00000078), url(https://therapy-central.com/wp-content/uploads/2023/05/image-4-2-2048x1642.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+    padding: 72px 20px;
+}
+
+
+.priceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    max-width: 1200px;
+}
+
+
+.pricesText {
+    font-size: clamp(40px, 7vw, 70px);
+    margin: 0 0 16px;
+    color: #fbf8e8;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    line-height: 1.05;
+}
+
+.pricesSmallText {
+    font-size: clamp(13px, 2.1vw, 16px);
+    font-weight: 400;
+    color: #fbf8e8;
+    width: min(800px, 100%);
+    text-align: center;
+    line-height: 1.45;
+    margin-bottom: 24px;
+}
+
+
+.cards3box {
+    width: min(1100px, 100%);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+}
+
+.card {
+    width: 100%;
+    min-height: 250px;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: linear-gradient(160deg, #0c1c3cd1, #282828ae);
+    border: 1px solid #ffffff14;
+    color: #ffffff;
+    box-shadow: 0 12px 30px #04081859;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+.card button {
+    border: none;
+    padding: 10px 16px;
+    margin-top: 12px;
+    color: #fbf8e8;
+    background-color: #304fcf;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 160px;
+    transition: background-color 200ms ease;
+}
+
+.card button:hover {
+    background-color: #263ea3;
+}
+
+
+
+.card h3 {
+    font-size: clamp(16px, 2.2vw, 21px);
+    margin-bottom: 8px;
+    line-height: 1.25;
+    word-break: break-word;
+}
+
+.card p {
+    font-size: clamp(12px, 1.8vw, 13px);
+    margin-bottom: 7px;
+    line-height: 1.35;
+    word-break: break-word;
+}
+
+.card:hover::after {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: auto -30% -40% -30%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 55%);
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .Prices {
+        padding: 52px 20px;
+        min-height: fit-content;
+    }
+
+    .pricesSmallText {
+        font-size: 14px;
+    }
+
+    .cards3box {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+ 
+
+    .pricesText {
+        margin-bottom: 12px;
+    }
+
+    .pricesSmallText {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+       .Prices {
+        padding: 44px 16px;
+    }
+
+    .card {
+        padding: 22px 16px;
+        min-height: 220px;
+    }
+
+    .card h3 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .cards3box {
+        grid-template-columns: 1fr;
+    }
+
+
+    .Prices {
+        padding: 36px 14px;
+    }
+    
+    .pricesSmallText {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .card {
+        min-height: auto;
+        padding: 18px 14px;
+    }
+
+}
